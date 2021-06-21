@@ -1,0 +1,3 @@
+# #Usage: gcreate userName repoName "Description if any"
+# # source: https://gist.github.com/robwierzbowski/5430952#gistcomment-1622416
+curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"description\": \"$3\"}"

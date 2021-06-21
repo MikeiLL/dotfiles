@@ -1,0 +1,100 @@
+# use Node's blc to check broken links
+# see: https://github.com/stevenvachon/broken-link-checker
+
+PATH=/usr/local/lib:/usr/local/bin:/usr/local/sbin:~/bin
+PATH=/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:$PATH
+
+# this might make gettext available in env
+PATH=$PATH:/Applications/Poedit.app/Contents/MacOS
+PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
+# PATH=$PATH:/Library/Python/2.7/site-packages/
+
+PATH="$HOME/.npm-packages/bin:$PATH"
+PATH="$HOME/.npm/bin:$PATH"
+PATH="$PATH:/Volumes/Oggun/Applications/flutter/bin"
+
+# for Rosuav's shed
+PATH=$PATH:~/shed
+PATH=$PATH:/Library/TeX/texbin/
+
+PATH="$PATH:$HOME/.composer/vendor/bin"
+
+# For Homebrew
+PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# for lilypond
+PATH=$PATH:~/bin:/usr/texbin
+PATH=/usr/local/texlive/2016/bin/x86_64-darwin:$PATH
+
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Keybase.app/Contents/SharedSupport/bin:/usr/local/MacGPG2/bin:
+PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# Anaconda
+# PATH=$PATH:"/usr/local/anaconda3/bin"
+# PATH=$PATH:"/Users/mikekilmer/anaconda/bin"
+
+# Postgres
+PATH=$PATH:/usr/local/Cellar/postgresql@11/11.11_1/bin/
+
+# ZSH Homebrew fix
+PATH=/opt/homebrew/bin:$PATH
+
+
+# for valet+
+PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+PATH="/usr/local/opt/php@7.2/bin:$PATH"
+PATH="/usr/local/opt/valet-php@7.2/bin:$PATH"
+PATH="/usr/local/opt/valet-php@7.2/sbin:$PATH"
+PATH="/usr/local/opt/valet-php@7.4/bin:$PATH"
+PATH="/usr/local/opt/valet-php@7.4/sbin:$PATH"
+PATH="/usr/local/opt/valet-php@7.3/bin:$PATH"
+PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# For python from Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+PATH="$PYENV_ROOT/bin:$PATH"
+
+export PATH
+
+
+# For python from Pyenv
+eval "$(pyenv init --path)"
+
+# pyenv load automatically
+eval "$(pyenv init -)"
+
+# For pyenv-virtualenv
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# Other Environment Variables
+
+export CPPFLAGS="-I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/valet-php@7.4/include -I/usr/local/opt/ruby/include"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/valet-php@7.4/lib -L/usr/local/opt/valet-php@7.2/lib -L/usr/local/opt/ruby/lib"
+
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfigi /usr/local/opt/ruby/lib/pkgconfig"
+export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2
+export ANDROID_SDK_HOME=/Volumes/Oggun/Android/.android
+
+# I think this is for VIM Colors was weird with zsh
+# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+# export CLICOLOR=1
+# export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export SVN_EDITOR=vim
+
+export VAGRANT_HOME=/Volumes/Oggun/vagrant_home
+
+export NVM_DIR="/Users/mikekilmer/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NODE_PATH=/usr/local/bin/node:/Users/mikekilmer/.nvm/versions/node/v6.9.4/lib/node_modules
+
+export COMPOSER_DISABLE_XDEBUG_WARN=1
+
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+## export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+## export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+## source /usr/local/bin/virtualenvwrapper.sh
+## export WORKON_HOME=$HOME/.venv
+
