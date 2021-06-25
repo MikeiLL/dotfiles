@@ -39,7 +39,7 @@ brew "mysql", restart_service: true
 brew "mysql@5.7", restart_service: true
 brew "nasm"
 brew "node"
-brew "php"
+brew "php", link: false
 brew "pipenv"
 brew "portaudio"
 brew "postgresql", restart_service: true
@@ -57,6 +57,8 @@ brew "redis", restart_service: true
 brew "rename"
 brew "rsync"
 brew "ruby"
+brew "s3cmd"
+brew "starship"
 brew "testdisk"
 brew "tree"
 brew "wget"
@@ -67,7 +69,7 @@ brew "henkrehorst/php/valet-php@7.0"
 brew "henkrehorst/php/valet-php@7.2"
 brew "henkrehorst/php/valet-php@7.3", link: true
 brew "henkrehorst/php/valet-php@7.4"
-brew "roots/tap/trellis-cli"
+brew "roots/tap/trellis-cli", link: false
 brew "roots/tap/trellis-cli-dev", args: ["HEAD"]
 cask "google-cloud-sdk"
 cask "kdiff3"
