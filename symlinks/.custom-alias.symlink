@@ -10,7 +10,7 @@ alias affinity="open -a Affinity\ Designer.app"
 alias astudio="open -a /Volumes/Oggun/Applications/Android\ Studio.app"
 
 alias bb="open -a BBEdit.app"
-alias vsc="open -a Visual\ Studio\ Code.app"
+alias code="open -a Visual\ Studio\ Code.app"
 alias pc="open -a PyCharm.app"
 #play midi files using Quicktime 7
 alias midi="open -a /Applications/Utilities/QuickTime\ Player\ 7.app"
@@ -26,7 +26,7 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias startpsql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias dockerwp="docker-compose run --rm my-wpcli" #simple docker wordpress
 alias wpcli="docker-compose run --rm wp-cli wp" #chris zarate docker
-# for plugin: debug-log 
+# for plugin: debug-log
 alias debugwp='docker-compose exec my-wp tail -10 wp-content/debug.log'
 alias flush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
 alias clients='cd /Volumes/Oggun/Clients'
@@ -58,9 +58,10 @@ alias quod="/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quo
 # DIRECTORIES
 alias mbo="cd ~/Docker/WP/mzmbo"
 alias hymnal="cd ~/Documents/Vault/Hymnal/VolTwo/"
+alias ttfb="curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup} seconds\nConnect Time:\t\t%{time_connect} seconds\nAppCon Time:\t\t%{time_appconnect} seconds\nRedirect Time:\t\t%{time_redirect} seconds\nPre-transfer Time:\t%{time_pretransfer} seconds\nStart-transfer Time:\t%{time_starttransfer} seconds\n\nTotal Time:\t\t%{time_total} seconds\n' -o /dev/null"
 
 # source: https://dcblog.dev/switching-between-php-versions-with-homebrew
-# use it like: `switchphp 7.4` 
+# use it like: `switchphp 7.4`
 # may also want to `valet use php@7.3 --force`
 # other useful commands:
 # ls -1 /usr/local/opt/ | grep php
