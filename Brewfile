@@ -24,7 +24,9 @@ brew "geoip"
 brew "git"
 brew "git-gui"
 brew "gnu-typist"
-brew "httpd"
+brew "libusb"
+brew "gnupg"
+brew "httpd", restart_service: true
 brew "jq"
 brew "krb5"
 brew "libdvdcss"
@@ -32,19 +34,19 @@ brew "libpq"
 brew "pango"
 brew "librsvg"
 brew "libssh"
-brew "libusb"
 brew "lsusb"
 brew "mailhog", restart_service: true
 brew "mysql", restart_service: true
 brew "mysql@5.7", restart_service: true
 brew "nasm"
 brew "node"
-brew "php", link: false
+brew "nvm"
+brew "php", restart_service: true, link: false
 brew "pipenv"
 brew "portaudio"
 brew "postgresql", restart_service: true
-brew "postgresql@11"
-brew "postgresql@12"
+brew "postgresql@11", restart_service: true
+brew "postgresql@12", restart_service: true
 brew "potrace"
 brew "pv"
 brew "pwgen"
@@ -65,12 +67,10 @@ brew "wget"
 brew "wp-cli"
 brew "yarn"
 brew "zlib"
-brew "henkrehorst/php/valet-php@7.0"
-brew "henkrehorst/php/valet-php@7.2"
-brew "henkrehorst/php/valet-php@7.3", link: true
-brew "henkrehorst/php/valet-php@7.4"
+brew "zsh"
 brew "roots/tap/trellis-cli", link: false
 brew "roots/tap/trellis-cli-dev", args: ["HEAD"]
+cask "dropbox"
 cask "google-cloud-sdk"
 cask "kdiff3"
 cask "keybase"
