@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Switch to dark mode
+# Switch to dark mode (not at this time because Minco breaks)
 osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to 1'
 
-# Disable press-and-hold for keys in favor of key repeat
-defaults write -g ApplePressAndHoldEnabled -bool false
+# Enable press-and-hold for keys instead of key repeat
+defaults write -g ApplePressAndHoldEnabled -bool true
 
 # Set key repeat to 60hz to match screen refresh rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+# defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Use AirDrop over every interface
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
@@ -75,3 +75,7 @@ defaults write com.apple.screencapture location ~/Pictures/Screenshots
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/.dotfiles/config/iterm"
 defaults write com.googlecode.iterm2 NoSyncNeverRemindPrefsChangesLostForFile_selection -bool false
+
+# Disable notifications
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+killall NotificationCenter
