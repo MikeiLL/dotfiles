@@ -57,7 +57,7 @@ alias quod="/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quo
 
 # DIRECTORIES
 alias mbo="cd ~/Docker/WP/mzmbo"
-alias hymnal="cd ~/Documents/Vault/Hymnal/VolTwo/"
+alias hymnal="cd /Volumes/Oggun/Documents/Hymnal"
 alias ttfb="curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup} seconds\nConnect Time:\t\t%{time_connect} seconds\nAppCon Time:\t\t%{time_appconnect} seconds\nRedirect Time:\t\t%{time_redirect} seconds\nPre-transfer Time:\t%{time_pretransfer} seconds\nStart-transfer Time:\t%{time_starttransfer} seconds\n\nTotal Time:\t\t%{time_total} seconds\n' -o /dev/null"
 
 # source: https://dcblog.dev/switching-between-php-versions-with-homebrew
