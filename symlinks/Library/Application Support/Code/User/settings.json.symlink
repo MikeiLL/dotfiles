@@ -12,7 +12,6 @@
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,
-  "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "boundary",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollBeyondLastLine": false,
@@ -170,5 +169,9 @@
     "**/venv/**": true,
     "env-*": true
   },
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
+  "dart.flutterSdkPath": "/Volumes/Oggun/Applications/flutter",
+  "editor.inlineSuggest.enabled": true,
+  "editor.guides.indentation": false,
+  "php.validate.executablePath": "/usr/local/bin/php"
 }
