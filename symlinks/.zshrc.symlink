@@ -185,7 +185,7 @@ plugins=(
   docker
   docker-compose
   git
-  autoenv
+  autoenv # https://github.com/DArcMattr/autoenv
 )
 
 source $ZSH/oh-my-zsh.sh
