@@ -16,8 +16,6 @@
 	pager = less
 [credential]
 	helper = osxkeychain
-[delta]
-	syntax-theme = Sublime Snazzy
 [difftool]
 	prompt = false
 [diff]
@@ -28,8 +26,6 @@
 	autocorrect = 1
 [init]
 	defaultBranch = main
-[interactive]
-	diffFilter = delta --color-only
 [mergetool]
 	keepBackup = false
 	keepTemporaries = false
