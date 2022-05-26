@@ -53,7 +53,7 @@ alias tests='docker-compose -f docker-compose.phpunit.yml run --rm wordpress_php
 
 alias openhere='open -a /Applications/Utilities/Terminal.app .'
 alias grepnn="grep -ri --exclude-dir=node_module ."
-alias quod="/Volumes/Oggun/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quodlibet/quodlibet/quodlibet.py"
+alias quod="/Volumes/Oggun/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quodlibet/quodlibet.py"
 
 # DIRECTORIES
 alias mbo="cd ~/Docker/WP/mzmbo"
