@@ -6,7 +6,7 @@ ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mikekilmer/.oh-my-zsh"
 
-echo "zshenv loaded"
+echo "zshrc loading"
 
 # jacobwgillespie Start
 # If profiling is enabled, collect timing information
@@ -338,3 +338,4 @@ fi
 source ~/.zpm/zpm.zsh
 
 zpm load zpm-zsh/autoenv
+eval "$(starship init zsh)"
