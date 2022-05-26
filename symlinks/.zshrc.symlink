@@ -6,6 +6,8 @@ ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mikekilmer/.oh-my-zsh"
 
+echo "zshenv loaded"
+
 # jacobwgillespie Start
 # If profiling is enabled, collect timing information
 if [ ! -z "$ZSH_PROF" ]; then
@@ -183,6 +185,7 @@ plugins=(
   docker
   docker-compose
   git
+  autoenv
 )
 
 source $ZSH/oh-my-zsh.sh

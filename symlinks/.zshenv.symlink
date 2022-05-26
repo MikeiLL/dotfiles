@@ -62,7 +62,6 @@ PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 
 export PATH
 
-
 # For python from Pyenv
 eval "$(pyenv init --path)"
 
