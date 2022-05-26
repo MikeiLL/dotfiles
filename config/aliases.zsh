@@ -64,7 +64,7 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias startpsql='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias dockerwp="docker-compose run --rm my-wpcli" #simple docker wordpress
 alias wpcli="docker-compose run --rm wp-cli wp" #chris zarate docker
-# for plugin: debug-log 
+# for plugin: debug-log
 alias debugwp='docker-compose exec my-wp tail -10 wp-content/debug.log'
 alias flush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
 alias clients='cd /Volumes/Oggun/Clients'
@@ -91,14 +91,14 @@ alias tests='docker-compose -f docker-compose.phpunit.yml run --rm wordpress_php
 
 alias openhere='open -a /Applications/Utilities/Terminal.app .'
 alias grepnn="grep -ri --exclude-dir=node_module ."
-alias quod="/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quodlibet/quodlibet/quodlibet.py"
+alias quod="/Volumes/Oggun/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quodlibet/quodlibet/quodlibet.py"
 
 # DIRECTORIES
 alias mbo="cd ~/Docker/WP/mzmbo"
 alias hymnal="cd ~/Documents/Vault/Hymnal/VolTwo/"
 
 # source: https://dcblog.dev/switching-between-php-versions-with-homebrew
-# use it like: `switchphp 7.4` 
+# use it like: `switchphp 7.4`
 # may also want to `valet use php@7.3 --force`
 # other useful commands:
 # ls -1 /usr/local/opt/ | grep php
