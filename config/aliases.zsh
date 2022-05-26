@@ -4,7 +4,7 @@ if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
 else
   alias clr="tput reset"
 fi
-echo "ZSH Aliases Loaded"
+
 # Reload zsh configuration
 alias reload!='. ~/.zshrc'
 

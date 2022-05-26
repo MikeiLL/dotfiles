@@ -120,6 +120,3 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 # For curl as per https://stackoverflow.com/a/63931554/2223106
 unsetopt nomatch
-
-
-echo "zshenv loaded"
