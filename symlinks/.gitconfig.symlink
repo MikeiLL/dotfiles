@@ -23,7 +23,7 @@
 [gpg]
 	program = /usr/local/bin/gpg
 [help]
-	autocorrect = 1
+	autocorrect = 0
 [init]
 	defaultBranch = main
 [mergetool]
