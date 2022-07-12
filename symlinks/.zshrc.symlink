@@ -183,36 +183,10 @@ plugins=(
   docker
   docker-compose
   git
-  autoenv # https://github.com/DArcMattr/autoenv
+  autoenv # https://github.com/zpm-zsh/autoenv
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # added by travis gem
 [ -f /Users/mikekilmer/.travis/travis.sh ] && source /Users/mikekilmer/.travis/travis.sh
@@ -246,72 +220,12 @@ gpip(){
    PIP_REQUIRE_VIRTUALENV="0" pip3 "$@"
 }
 
-# function lorem(){
-# 	# Copy lorem ipsum to your clipboard in OS X
-#
-# 	# usage:
-#
-# 	# $ lorem <int> <htmlflag>
-#
-# 	# where <int> is how many paragraphs of lorem ipsum you want, each separated by 2 newlines
-# 	# and <htmlflag> is anything, indicating you want each paragraph surrounded by <p></p>. Omit if you don't want this.
-#
-# 	# Explanations
-#
-# 	# This is our source lorem ipsum text.
-# 	lorem='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-#
-# 	# Here we are gathering the <int> argument.
-# 	count=$(( $1 ))
-#
-# 	# The minimum is 1 lorem ipsum, so enforce that here.
-# 	if [[ "$count" -lt 1 ]];
-# 	then
-# 		count=$(( $count + 1 ))
-# 	fi
-#
-# 	# This is the variable that will hold our output.
-# 	text=''
-#
-# 	# Iterate until our count is zero. Decrement each iteration.
-# 	while [ "$count" -gt 0 ];
-# 	do
-# 		# Append the lorem ipsum again.
-# 		# Check if we should add a beginning <p> tag.
-# 		if [[ $2 != '' ]];
-# 		then
-# 			text=$text'<p>'$lorem'</p>'
-# 		else
-# 			text=$text$lorem
-# 		fi
-#
-# 		# If this isn't the last iteration, add newlines or paragraph HTML tags.
-# 		if [[ "$count" -gt 1 ]];
-# 		then
-# 			text=$text'\n\n'
-# 		fi
-#
-# 		# Decrement our counter variable.
-# 		count=$(( $count - 1 ))
-# 	done
-#
-# 	# Copy to clipboard!
-# 	echo -e $text | pbcopy
-# }
-#
 # #Usage: gcreate userName repoName "Description if any"
 # # source: https://gist.github.com/robwierzbowski/5430952#gistcomment-1622416
 gcreate () {
   curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"description\": \"$3\"}"
 }
 
-# if type brew &>/dev/null; then
-#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-#   autoload -Uz compinit
-#   compinit
-# fi
-
-# Maybe figure this out: https://github.com/pypa/pipenv
 
 # Trellis CLI Auto Complete
 eval "$(trellis shell-init zsh)"
@@ -330,10 +244,4 @@ setopt complete_aliases
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/trellis trellis
 
-if [[ ! -f ~/.zpm/zpm.zsh ]]; then
-  git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
-fi
-source ~/.zpm/zpm.zsh
-
-zpm load zpm-zsh/autoenv
 eval "$(starship init zsh)"
