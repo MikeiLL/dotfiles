@@ -10,6 +10,8 @@ format = """\
   $line_break\
   $jobs\
   $character\
+  $python\
+  $sudo\
   """
 
 [character]
@@ -25,3 +27,7 @@ style = "bold yellow"
 
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
+
+[python]
+symbol = "👾 "
+pyenv_version_name = true

@@ -60,6 +60,8 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 
 PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 
+PATH="/usr/local/opt/python:$PATH"
+
 export PATH
 
 # For python from Pyenv
@@ -70,6 +72,9 @@ eval "$(pyenv init -)"
 
 # For pyenv-virtualenv
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# Default Python (Arduino was not finding it.)
+PATH="/usr/local/opt/python:$PATH"
 
 # Other Environment Variables
 CPPFLAGS="-I/usr/local/opt/ruby/include"
@@ -108,10 +113,6 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export COMPOSER_DISABLE_XDEBUG_WARN=1
-
-
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 ## export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 ## export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
