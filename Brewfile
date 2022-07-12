@@ -11,7 +11,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "roots/tap"
 brew "openssl@1.1"
-brew "autoenv"
 brew "bash-git-prompt", args: ["HEAD"]
 brew "python@3.9"
 brew "glib"
