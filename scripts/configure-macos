@@ -30,7 +30,7 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock size-immutable -bool true
 
 # Place the Dock on the left side of the screen
-defaults write com.apple.dock orientation left
+defaults write com.apple.dock orientation bottom
 
 # Hide recent apps from Dock
 defaults write com.apple.dock show-recents -bool false
