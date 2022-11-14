@@ -39,6 +39,10 @@ PATH=$PATH:/usr/local/Cellar/postgresql@11/11.11_1/bin/
 # ZSH Homebrew fix
 PATH=/opt/homebrew/bin:$PATH
 
+# Ruby, icu4c
+PATH="/usr/local/opt/icu4c/bin:$PATH"
+PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
 
 # for valet+
 PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
@@ -78,18 +82,18 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 # Other Environment Variables
 CPPFLAGS="-I/usr/local/opt/ruby/include"
-CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@13/include"
+CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@13/include -I/usr/local/opt/icu4c/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/valet-php@7.4/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/ruby/include"
 export CPPFLAGS
 
 LDFLAGS="-L/usr/local/opt/ruby/lib"
-LDFLAGS="$LDFLAGS -L/usr/local/opt/postgresql@13/lib"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/postgresql@13/lib -L/usr/local/opt/icu4c/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/valet-php@7.4/lib -L/usr/local/opt/valet-php@7.2/lib"
 export LDFLAGS
 
-PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig /usr/local/opt/icu4c/lib/pkgconfig"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/openssl@1.1/lib/pkgconfigi"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/postgresql@13/lib/pkgconfig"
 export PKG_CONFIG_PATH
