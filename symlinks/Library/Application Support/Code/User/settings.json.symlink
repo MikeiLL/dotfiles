@@ -9,7 +9,6 @@
   "editor.lineHeight": 0,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
-  "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,
   "editor.renderWhitespace": "boundary",
@@ -329,5 +328,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.guides.indentation": false,
   "git.path": "/usr/local/bin/git",
-  "php.validate.executablePath": "/usr/local/bin/php"
+  "php.validate.executablePath": "/usr/local/bin/php",
+  "editor.minimap.enabled": false,
+  "editor.find.autoFindInSelection": "always"
 }
