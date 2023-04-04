@@ -14,5 +14,11 @@
     "key": "cmd+s",
     "command": "searchEditorApplyChanges.apply",
     "when": "inSearchEditor"
+  },
+  {
+    "key": "cmd+f1",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Choc Autoimport",
+    "when": "editorTextFocus"
   }
 ]
