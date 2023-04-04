@@ -64,6 +64,14 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 
 PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 
+# The php.ini and php-fpm.ini file can be found in: /usr/local/etc/php/8.1/
+PATH="/usr/local/opt/php@8.1/sbin:$PATH"
+PATH="/usr/local/opt/php@8.1/bin:$PATH"
+PATH="/usr/local/opt/php@8.2/sbin:$PATH"
+PATH="/usr/local/opt/php@8.2/bin:$PATH"
+PATH="/usr/local/opt/php@8.0/sbin:$PATH"
+PATH="/usr/local/opt/php@8.0/bin:$PATH"
+
 # Default Python (Arduino was not finding it.)
 # PATH="/usr/local/opt/python:$PATH"
 PATH="/usr/local/bin/python:$PATH"
@@ -80,17 +88,18 @@ eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
+
 # Other Environment Variables
 CPPFLAGS="-I/usr/local/opt/ruby/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@13/include -I/usr/local/opt/icu4c/include"
-CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/valet-php@7.4/include"
+CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/valet-php@7.4/include -I/usr/local/opt/php@8.1/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/ruby/include"
 export CPPFLAGS
 
 LDFLAGS="-L/usr/local/opt/ruby/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/postgresql@13/lib -L/usr/local/opt/icu4c/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
-LDFLAGS="$LDFLAGS -L/usr/local/opt/valet-php@7.4/lib -L/usr/local/opt/valet-php@7.2/lib"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/valet-php@7.4/lib -L/usr/local/opt/valet-php@7.2/lib -L/usr/local/opt/php@8.1/lib"
 export LDFLAGS
 
 PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig /usr/local/opt/icu4c/lib/pkgconfig"
