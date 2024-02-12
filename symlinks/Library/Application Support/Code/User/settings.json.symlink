@@ -10,7 +10,7 @@
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": "off",
   "editor.renderWhitespace": "boundary",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollBeyondLastLine": false,
@@ -136,7 +136,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
   "dart.debugExternalLibraries": true,
   "dart.debugSdkLibraries": false,
@@ -332,5 +332,8 @@
   "editor.minimap.enabled": false,
   "editor.find.autoFindInSelection": "always",
   "phpSniffer.autoDetect": true,
-  "editor.detectIndentation": false
+  "editor.detectIndentation": false,
+  "git.openRepositoryInParentFolders": "never",
+  "application.shellEnvironmentResolutionTimeout": 60,
+  "html.format.contentUnformatted": ""
 }
