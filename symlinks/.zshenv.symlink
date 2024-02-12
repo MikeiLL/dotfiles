@@ -55,6 +55,16 @@ PATH="/usr/local/opt/valet-php@7.4/sbin:$PATH"
 PATH="/usr/local/opt/valet-php@7.3/bin:$PATH"
 PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
+
+# React Native
+export ANDROID_HOME=/usr/local/share/android-sdk
+PATH=$PATH:$ANDROID_HOME/emulator
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/platform-tools
+PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export ANDROID_SDK_HOME=/Volumes/Oggun/Android/.android
+
 # For python from Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 
@@ -70,6 +80,7 @@ PATH="/usr/local/opt/php@8.2/sbin:$PATH"
 PATH="/usr/local/opt/php@8.2/bin:$PATH"
 PATH="/usr/local/opt/php@8.0/sbin:$PATH"
 PATH="/usr/local/opt/php@8.0/bin:$PATH"
+PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.2.0/bin:$PATH"
 
 # Default Python (Arduino was not finding it.)
 # PATH="/usr/local/opt/python:$PATH"
