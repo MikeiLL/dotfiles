@@ -116,9 +116,6 @@ PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/openssl@1.1/lib/pkgconfigi"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/postgresql@15/lib/pkgconfig"
 export PKG_CONFIG_PATH
 
-
-export PYTHON_CONFIGURE_OPTS=--enable-unicode=ucs2
-export ANDROID_SDK_HOME=/Volumes/Oggun/Android/.android
 export CHROME_EXECUTABLE=/Volumes/Oggun/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 # I think this is for VIM Colors was weird with zsh
