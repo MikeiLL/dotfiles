@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@bigcommerce/stencil-cli": "^7.2.0",
     "@cloudflare/wrangler": "^1.16.1",
     "create-next-app": "^10.2.0",
+    "create-stencil": "^3.3.1",
     "fast-cli": "^3.0.1",
     "fkill-cli": "^6.1.0",
     "github-release-from-changelog": "^2.1.1",

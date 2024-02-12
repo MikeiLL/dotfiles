@@ -14,8 +14,6 @@ alias code="open -a Visual\ Studio\ Code.app"
 alias pc="open -a PyCharm.app"
 #play midi files using Quicktime 7
 alias midi="open -a /Applications/Utilities/QuickTime\ Player\ 7.app"
-# gsync command: gsutil -m rsync -r Logic gs://mutiny_zoo_jackson_street_qnap_nas_backup/OriginalWork/Logic
-alias gsynclogic=gsutil -m rsync -r Logic gs://mutiny_zoo_jackson_street_qnap_nas_backup/OriginalWork/Logic
 alias ls='ls -GFh'
 alias rmorig='find . -name "*.orig" -print0 | xargs -0 rm -rf'
 
@@ -47,6 +45,8 @@ alias delicious="echo 89b770ec-ec80-4201-9789-f3a798a810f3 | pbcopy"
 # for FILE in `find . -type f -name "*.svg"`; do FILENAME=$(echo -e "$FILE"); echo "$FILENAME"; done
 # for FILE in `find . -type f -name "*.svg"`; do echo -e "$FILE"; done
 alias svg3png="find . -type f -name \"*.svg\" -exec echo '{}' +"
+
+alias bp="cd /Volumes/Oggun/Original\ Work/Writing\ and\ Letters/Broken\ P"
 
 # Following for chriszarate Docker compose
 alias tests='docker-compose -f docker-compose.phpunit.yml run --rm wordpress_phpunit phpunit'
