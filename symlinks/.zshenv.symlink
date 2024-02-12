@@ -34,7 +34,8 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 # PATH=$PATH:"/Users/mikekilmer/anaconda/bin"
 
 # Postgres
-PATH=$PATH:/usr/local/Cellar/postgresql@11/11.11_1/bin/
+PATH=$PATH:/usr/local/opt/postgresql@15/bin/
+
 
 # ZSH Homebrew fix
 PATH=/opt/homebrew/bin:$PATH
@@ -62,8 +63,6 @@ eval "$(pyenv init --path)"
 
 PATH="/usr/local/opt/ruby/bin:$PATH"
 
-PATH="/usr/local/opt/postgresql@13/bin:$PATH"
-
 # The php.ini and php-fpm.ini file can be found in: /usr/local/etc/php/8.1/
 PATH="/usr/local/opt/php@8.1/sbin:$PATH"
 PATH="/usr/local/opt/php@8.1/bin:$PATH"
@@ -88,23 +87,22 @@ eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
-
 # Other Environment Variables
 CPPFLAGS="-I/usr/local/opt/ruby/include"
-CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@13/include -I/usr/local/opt/icu4c/include"
+CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@15/include -I/usr/local/opt/icu4c/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/valet-php@7.4/include -I/usr/local/opt/php@8.1/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/ruby/include"
 export CPPFLAGS
 
 LDFLAGS="-L/usr/local/opt/ruby/lib"
-LDFLAGS="$LDFLAGS -L/usr/local/opt/postgresql@13/lib -L/usr/local/opt/icu4c/lib"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/postgresql@15/lib -L/usr/local/opt/icu4c/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/valet-php@7.4/lib -L/usr/local/opt/valet-php@7.2/lib -L/usr/local/opt/php@8.1/lib"
 export LDFLAGS
 
 PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig /usr/local/opt/icu4c/lib/pkgconfig"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/openssl@1.1/lib/pkgconfigi"
-PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/postgresql@13/lib/pkgconfig"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/postgresql@15/lib/pkgconfig"
 export PKG_CONFIG_PATH
 
 
@@ -118,6 +116,7 @@ export CHROME_EXECUTABLE=/Volumes/Oggun/Applications/Google\ Chrome.app/Contents
 # export LSCOLORS=ExFxBxDxCxegedabagacad
 
 export SVN_EDITOR=vim
+
 
 export VAGRANT_HOME=/Volumes/Oggun/vagrant_home
 
