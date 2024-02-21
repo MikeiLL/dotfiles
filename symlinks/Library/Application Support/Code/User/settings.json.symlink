@@ -76,7 +76,6 @@
   "typescript.tsserver.maxTsServerMemory": 8192,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.titleBarStyle": "native",
-  "workbench.colorTheme": "GitHub Dark",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -140,7 +139,6 @@
   },
   "dart.debugExternalLibraries": true,
   "dart.debugSdkLibraries": false,
-  "workbench.iconTheme": "material-icon-theme",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
