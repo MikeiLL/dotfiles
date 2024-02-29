@@ -16,7 +16,7 @@ alias pc="open -a PyCharm.app"
 alias midi="open -a /Applications/Utilities/QuickTime\ Player\ 7.app"
 alias ls='ls -GFh'
 alias rmorig='find . -name "*.orig" -print0 | xargs -0 rm -rf'
-alias 2fa='/Users/mikekilmer/Rosuav/shed/2fa'
+alias 2fa='/Users/mikekilmer/.pyenv/shims/python /Users/mikekilmer/Rosuav/shed/2fa'
 
 alias measure="sudo du -hsx * | sort -r | head -10" # measures ten largest dirs in current dir.
 alias dkr="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
