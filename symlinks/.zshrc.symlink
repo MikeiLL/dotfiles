@@ -128,7 +128,7 @@ ZSH_THEME="agnoster"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -223,7 +223,7 @@ gpip(){
 # #Usage: gcreate userName repoName "Description if any"
 # # source: https://gist.github.com/robwierzbowski/5430952#gistcomment-1622416
 gcreate () {
-  curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"description\": \"$3\"}"
+  # curl -u $1 https://api.github.com/user/repos -d "{\"name\": \"$2\", \"description\": \"$3\"}"
 }
 
 

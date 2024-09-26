@@ -333,5 +333,7 @@
   "editor.detectIndentation": false,
   "git.openRepositoryInParentFolders": "never",
   "application.shellEnvironmentResolutionTimeout": 60,
-  "html.format.contentUnformatted": ""
+  "html.format.contentUnformatted": "",
+  "git.mergeEditor": true,
+  "github.copilot.editor.enableAutoCompletions": true
 }

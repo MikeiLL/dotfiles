@@ -17,6 +17,9 @@ alias midi="open -a /Applications/Utilities/QuickTime\ Player\ 7.app"
 alias ls='ls -GFh'
 alias rmorig='find . -name "*.orig" -print0 | xargs -0 rm -rf'
 alias 2fa='/Users/mikekilmer/.pyenv/shims/python /Users/mikekilmer/Rosuav/shed/2fa'
+# src: https://discussions.apple.com/docs/DOC-250004361
+alias apachestart='sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist'
+alias apachestop='sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist'
 
 alias measure="sudo du -hsx * | sort -r | head -10" # measures ten largest dirs in current dir.
 alias dkr="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"

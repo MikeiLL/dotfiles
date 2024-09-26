@@ -16,10 +16,10 @@
 	pager = less
 [credential]
 	helper = osxkeychain
-[difftool]
-	prompt = false
 [diff]
-	tool = kdiff3
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [gpg]
 	program = /usr/local/bin/gpg
 [help]
@@ -39,8 +39,7 @@
 	name = mikeill
 	email = mike@mzoo.org
 	signingkey = SHA256:MOeyFLfDjkHH229EmnJBSEy0emFOL79JfudWeG+tr2A
-[mergetool "kdiff3"]
-	cmd = \"/Applications/kdiff3.app/Contents/MacOS/kdiff3\" --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
 [merge]
-	tool = kdiff3
-	conflictstyle = merge
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
