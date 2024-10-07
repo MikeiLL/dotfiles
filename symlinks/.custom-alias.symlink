@@ -16,7 +16,7 @@ alias pc="open -a PyCharm.app"
 alias midi="open -a /Applications/Utilities/QuickTime\ Player\ 7.app"
 alias ls='ls -GFh'
 alias rmorig='find . -name "*.orig" -print0 | xargs -0 rm -rf'
-alias 2fa='/Users/mikekilmer/.pyenv/shims/python /Users/mikekilmer/Rosuav/shed/2fa'
+alias 2fa='/usr/bin/python3 /Users/mikekilmer/Rosuav/shed/2fa'
 # src: https://discussions.apple.com/docs/DOC-250004361
 alias apachestart='sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist'
 alias apachestop='sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist'
