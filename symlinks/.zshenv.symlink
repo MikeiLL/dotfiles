@@ -32,6 +32,7 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 # Anaconda
 # PATH=$PATH:"/usr/local/anaconda3/bin"
 # PATH=$PATH:"/Users/mikekilmer/anaconda/bin"
+PATH=$PATH:"/Users/mikekilmer/Rosuav/shed"
 
 # Postgres
 PATH=$PATH:/usr/local/opt/postgresql@15/bin/

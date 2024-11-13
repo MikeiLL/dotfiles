@@ -43,3 +43,7 @@
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[rosuav "git-watch"]
+	repos = /Volumes/Oggun/Clients/PageFlow/Oren Industries/estimate_calculator
+	repos = /Volumes/Oggun/Documents/Hymnal/VolOne/Music
+	repos = /Users/mikekilmer/.dotfiles
