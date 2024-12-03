@@ -1,6 +1,8 @@
 
 # Aliases here for zsh
 # COMMANDS
+# good source: https://weiyen.net/articles/useful-macos-cmd-line-utilities/
+#   networkQuality
 alias random='openssl rand -base64 32 | pbcopy'
 
 alias s3ltv='s3cmd -c ~/.s3cfg-ltv'
