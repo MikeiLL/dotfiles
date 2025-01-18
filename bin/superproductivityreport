@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# Usage function
+usage() {
+  echo "Usage: $0 <directory_path> <date>"
+  echo
+  echo "Generate a CSV report from the latest Super Productivity JSON backup file in a specified directory for a given date."
+  echo
+  echo "Arguments:"
+  echo "  <directory_path>    Path to the directory containing Super Productivity JSON backup files."
+  echo "  <date>              The date to report on (format: YYYY-MM-DD)."
+  echo
+  echo "Example:"
+  echo "  $0 /home/someone/.config/superProductivity/backups 2024-11-07"
+  exit 1
+}
+
+# Check for --help
+if [[ $1 == "--help" ]]; then
+  usage
+fi
+
+# Check for correct number of arguments
+if [[ $# -ne 2 ]]; then
+  usage
+fi
+
+# Assign input arguments to variables
+dir_path=$1
+report_date=$2
+
+# Validate directory path
+if [[ ! -d $dir_path ]]; then
+  echo "Error: Directory '$dir_path' not found."
+  exit 1
+fi
+
+# Find the newest JSON file in the directory
+input_file=$(ls -rt "$dir_path"/*.json 2>/dev/null | tail -n 1)
+
+# Check if a JSON file was found
+if [[ -z $input_file ]]; then
+  echo "Error: No JSON files found in the directory '$dir_path'."
+  exit 1
+fi
+
+#echo "Using input file: $input_file"
+
+# Generate the CSV report
+jq --arg date "$report_date" -r '
+  .task.entities as $tasks |
+  .project.entities as $projects |
+  $tasks | map_values(
+    select(.timeSpentOnDay | type == "object" and .[$date] != null) | {
+      date: $date,
+      project: ($projects[.projectId].title // .projectId),  # Get the project name or fallback to ID
+      task: .title,
+      hoursWorked: (.timeSpentOnDay[$date] / 3600000)  # Convert milliseconds to hours
+    }
+  ) | "date,project,task,hoursWorked",
+      (.[] | "\(.date),\"\(.project)\",\"\(.task)\",\(.hoursWorked)")
+' "$input_file" | while IFS=, read -r date project task hoursWorked; do
+  if [[ $hoursWorked == "hoursWorked" ]]; then
+    # Print the header as is
+    echo "$date,$project,$task,$hoursWorked"
+  else
+    # Convert fractional hours to hh:mm format and round to the nearest quarter
+    hours=${hoursWorked%.*}
+    fractional_part="0.${hoursWorked#*.}"
+    minutes=$(echo "($fractional_part * 60 + 0.5)/1" | bc)  # Round minutes to the nearest integer
+
+    # Round minutes to the nearest quarter (00, 15, 30, 45)
+    rounded_minutes=$(( (minutes + 7) / 15 * 15 ))  # Add 7 for rounding and round to the nearest 15
+
+    if (( rounded_minutes == 60 )); then
+      rounded_minutes="00"
+      ((hours++))
+    elif (( ${#rounded_minutes} == 1 )); then
+      rounded_minutes="0$rounded_minutes"
+    fi
+
+    echo "$date,$project,$task,$hours:$rounded_minutes"
+  fi
+done
