@@ -75,3 +75,7 @@ alias ttfb="curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nL
 switchphp() {
     brew unlink php && brew link --force --overwrite php@$1
 }
+
+spreport() {
+  /Users/mikekilmer/.dotfiles/bin/superproductivityreport /Users/mikekilmer/Library/Application\ Support/superProductivity/backups $1 | tee /tmp/temp.csv && libreoffice --calc /tmp/temp.csv
+}
