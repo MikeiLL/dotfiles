@@ -45,10 +45,11 @@
 	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [rosuav "git-watch"]
 	repos = /Volumes/Oggun/Clients/PageFlow/Oren Industries/estimate_calculator
-	repos = /Volumes/Oggun/Documents/Hymnal/VolOne/Music
+	repos = /Volumes/Oggun/Documents/Hymnal/GOLSongs
 	repos = /Users/mikekilmer/.dotfiles
 	repos = /Volumes/Oggun/Clients/StorybookSound/MarkdownWebsite
 	repos = /Users/mikekilmer/toolshed/url-status-checker
 	repos = /Volumes/Oggun/Clients/PageFlow/deal_audit-client
 	repos = /Volumes/Oggun/Clients/PageFlow/da_server
 	repos = /Volumes/Oggun/Clients/PageFlow/dnsserver
+	repos = /Volumes/Oggun/Clients/StorybookSound/ThinkPeace/think-peace-client
