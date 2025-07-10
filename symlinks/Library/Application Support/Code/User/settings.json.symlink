@@ -335,5 +335,6 @@
   "application.shellEnvironmentResolutionTimeout": 60,
   "html.format.contentUnformatted": "",
   "git.mergeEditor": true,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "lilypond-workshop.compilerPath": "/usr/local/bin/lilypond"
 }
