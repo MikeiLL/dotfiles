@@ -322,7 +322,7 @@
     "env-*": true
   },
   "python.formatting.provider": "black",
-  "dart.flutterSdkPath": "/Volumes/Oggun/Applications/flutter",
+  "dart.flutterSdkPath": "/Volumes/Oggun/Applications/Fluttersdk/flutter",
   "editor.inlineSuggest.enabled": true,
   "editor.guides.indentation": false,
   "git.path": "/usr/local/bin/git",
