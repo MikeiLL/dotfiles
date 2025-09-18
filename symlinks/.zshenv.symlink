@@ -20,6 +20,10 @@ PATH=$PATH:/Library/TeX/texbin/
 
 PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# Add my shed
+PATH="$PATH:/Users/mikekilmer/shed"
+PATH="$PATH:/Users/mikekilmer/shed/favicongenerator/modules"
+
 # For Homebrew
 PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
