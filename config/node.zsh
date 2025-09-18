@@ -7,8 +7,11 @@ export PATH="$N_PREFIX/bin:$PATH"
 export NPM_CONFIG_FUND=false
 
 # This is a private CLI, you can ignore this file
-if (( $+commands[dev] )); then
-  source <(dev completion script)
-  alias d=dev
-  compdef d=dev
-fi
+# Issue with following producing error:
+#   /Users/mikekilmer/.dotfiles/config/node.zsh:11: permission denied: dev
+#   compdef: unknown command or service: dev
+#if (( $+commands[dev] )); then
+#  source <(dev completion script)
+#  alias d=dev
+#  compdef d=dev
+#fi
