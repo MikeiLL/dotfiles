@@ -20,6 +20,10 @@ PATH=$PATH:/Library/TeX/texbin/
 
 PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# dotnet
+PATH="/usr/local/share/dotnet:$PATH"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # Add my shed
 PATH="$PATH:/Users/mikekilmer/shed"
 PATH="$PATH:/Users/mikekilmer/shed/favicongenerator/modules"
@@ -100,6 +104,8 @@ PATH="/usr/local/bin/python:$PATH"
 
 export PATH
 
+# for dotnet but did not work
+#source dnvm.sh
 # For python from Pyenv
 eval "$(pyenv init --path)"
 
