@@ -14,8 +14,6 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 	pager = less
-[credential]
-	helper = osxkeychain
 [diff]
 	tool = vscode
 [difftool "vscode"]
