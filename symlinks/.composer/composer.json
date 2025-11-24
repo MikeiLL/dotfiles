@@ -2,7 +2,7 @@
     "require": {
         "squizlabs/php_codesniffer": "*",
         "phpmd/phpmd": "^2.13",
-        "laravel/valet": "^4.1",
-        "laravel/installer": "^5.1"
+        "laravel/installer": "^5.23",
+        "laravel/valet": "^4.11"
     }
 }
