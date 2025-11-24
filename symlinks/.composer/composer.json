@@ -1,6 +1,5 @@
 {
     "require": {
-        "wpbp/generator": "dev-master",
         "squizlabs/php_codesniffer": "*",
         "phpmd/phpmd": "^2.13",
         "laravel/valet": "^4.1",
