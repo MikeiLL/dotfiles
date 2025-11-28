@@ -51,6 +51,9 @@ alias delicious="echo 89b770ec-ec80-4201-9789-f3a798a810f3 | pbcopy"
 # for FILE in `find . -type f -name "*.svg"`; do FILENAME=$(echo -e "$FILE"); echo "$FILENAME"; done
 # for FILE in `find . -type f -name "*.svg"`; do echo -e "$FILE"; done
 alias svg3png="find . -type f -name \"*.svg\" -exec echo '{}' +"
+# https://apple.stackexchange.com/questions/20547/how-do-i-find-my-ip-address-from-the-command-line#20553
+alias myip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com"
+alias intip="ipconfig getifaddr en1"
 
 alias bp="cd /Volumes/Oggun/Original\ Work/Writing\ and\ Letters/Broken\ P"
 
