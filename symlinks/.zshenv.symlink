@@ -60,7 +60,7 @@ PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
 
 # for valet+
-# PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+PATH="/usr/local/opt/openssl@3/bin:$PATH" # and ruby
 # PATH="/usr/local/opt/php@7.2/bin:$PATH"
 # PATH="/usr/local/opt/valet-php@7.2/bin:$PATH"
 # PATH="/usr/local/opt/valet-php@7.2/sbin:$PATH"
@@ -106,7 +106,11 @@ PATH="/usr/local/bin/python:$PATH"
 # Try gnu-sed (via Brew) over native osX version
 # PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
+# Ruby Jekyll issue missing certs
+export SSL_CERT_FILE="/usr/local/etc/openssl@3/certs/cacert.pem"
+
 export PATH
+
 
 # for dotnet but did not work
 #source dnvm.sh
@@ -129,8 +133,9 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 CPPFLAGS="-I/usr/local/opt/ruby/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@15/include -I/usr/local/opt/icu4c/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/include"
-# CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/valet-php@7.4/include -I/usr/local/opt/php@8.1/include"
+# CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/valet-php@7.4/include -I/usr/local/opt/php@8.1/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/ruby/include"
+CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openssl@3/include
 CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
 export CPPFLAGS
 
@@ -141,7 +146,7 @@ LDFLAGS="-L/usr/local/opt/ruby/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/postgresql@15/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/icu4c/lib -L/usr/local/lib"
 
-# LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
+LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@3/lib"
 # LDFLAGS="$LDFLAGS -L/usr/local/opt/valet-php@7.4/lib -L/usr/local/opt/valet-php@7.2/lib -L/usr/local/opt/php@8.1/lib"
 # LDFLAGS="$LDFLAGS -L/usr/local/opt/bison/lib"
 LDFLAGS="$LDFLAGS -L/usr/local/opt/mysql@5.7/lib"
@@ -153,7 +158,7 @@ export LDFLAGS
 
 
 PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig /usr/local/opt/icu4c/lib/pkgconfig"
-PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/openssl@1.1/lib/pkgconfigi"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/openssl@3/lib/pkgconfigi"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH /usr/local/opt/postgresql@15/lib/pkgconfig"
 export PKG_CONFIG_PATH
 

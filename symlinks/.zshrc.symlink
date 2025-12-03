@@ -260,3 +260,6 @@ function auto_activate_venv() {
 # Trigger auto_activate_venv function on directory change
 autoload -U add-zsh-hook
 add-zsh-hook chpwd auto_activate_venv
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
