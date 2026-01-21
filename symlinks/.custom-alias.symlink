@@ -65,7 +65,8 @@ alias grepnn="grep -ri --exclude-dir=node_module ."
 alias quod="/Volumes/Oggun/Applications/QuodLibet.app/Contents/MacOS/run /Users/mikekilmer/quodlibet/quodlibet.py"
 
 # DIRECTORIES
-alias mbo="cd ~/Docker/WP/mzmbo"
+alias mbo="cd /Volumes/Oggun/Clients/mZmbo/mzmbo.com/site/web/app/plugins/mz-mindbody-api"
+alias mzmbo="cd /Volumes/Oggun/Clients/mZmbo/mzmbo.com/site/web/app/plugins/mz-mindbody-api"
 alias hymnal="cd /Volumes/Oggun/Documents/Hymnal"
 alias ttfb="curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup} seconds\nConnect Time:\t\t%{time_connect} seconds\nAppCon Time:\t\t%{time_appconnect} seconds\nRedirect Time:\t\t%{time_redirect} seconds\nPre-transfer Time:\t%{time_pretransfer} seconds\nStart-transfer Time:\t%{time_starttransfer} seconds\n\nTotal Time:\t\t%{time_total} seconds\n' -o /dev/null"
 
