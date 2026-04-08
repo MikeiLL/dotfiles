@@ -135,7 +135,7 @@ CPPFLAGS="$CPPFLAGS -I/usr/local/opt/postgresql@15/include -I/usr/local/opt/icu4
 CPPFLAGS="$CPPFLAGS -I/usr/local/include"
 # CPPFLAGS="$CPPFLAGS -I/usr/local/opt/valet-php@7.2/include -I/usr/local/opt/valet-php@7.4/include -I/usr/local/opt/php@8.1/include"
 CPPFLAGS="$CPPFLAGS -I/usr/local/opt/ruby/include"
-CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openssl@3/include
+CPPFLAGS="$CPPFLAGS -I/usr/local/opt/openssl@3/include"
 CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
 export CPPFLAGS
 
