@@ -87,6 +87,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
+# for Lima
+export LIMA_HOME=/Volumes/Oggun/Lima
+
 PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # The php.ini and php-fpm.ini file can be found in: /usr/local/etc/php/8.1/
