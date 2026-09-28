@@ -174,7 +174,6 @@ export CHROME_EXECUTABLE=/Volumes/Oggun/Applications/Google\ Chrome.app/Contents
 
 export SVN_EDITOR=vim
 
-
 export VAGRANT_HOME=/Volumes/Oggun/vagrant_home
 
 export NVM_DIR="/Users/mikekilmer/.nvm"
