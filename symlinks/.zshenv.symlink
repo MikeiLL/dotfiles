@@ -45,11 +45,11 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH=$PATH:"/Users/mikekilmer/Rosuav/shed"
 
 # Postgres
-PATH=$PATH:/usr/local/opt/postgresql@15/bin/
+PATH=$PATH:/usr/local/opt/postgresql@18/bin/
 #echo 'export PATH="/usr/local/opt/postgresql@17/bin:$PATH"' >> ~/.zshrc
 #For compilers to find postgresql@17 you may need to set:
-#  export LDFLAGS="-L/usr/local/opt/postgresql@17/lib"
-#  export CPPFLAGS="-I/usr/local/opt/postgresql@17/include"
+export LDFLAGS="-L/usr/local/opt/postgresql@18/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@18/include"
 
 # ZSH Homebrew fix
 PATH=/opt/homebrew/bin:$PATH
