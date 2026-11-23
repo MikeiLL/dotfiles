@@ -21,9 +21,12 @@ PATH=$PATH:/Library/TeX/texbin/
 PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # dotnet
-PATH="$PATH:/usr/local/bin/dotnet"
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-PATH="$PATH:/Users/mikekilmer/.dotnet/tools"
+#PATH="$PATH:/usr/local/bin/dotnet"
+#export DOTNET_CLI_TELEMETRY_OPTOUT=1
+#PATH="$PATH:/Users/mikekilmer/.dotnet/tools"
+
+# Rust
+PATH="$PATH:/Users/mikekilmer/.cargo/bin"
 
 # Add my shed
 PATH="$PATH:/Users/mikekilmer/shed"
@@ -189,3 +192,4 @@ export COMPOSER_DISABLE_XDEBUG_WARN=1
 
 # For curl as per https://stackoverflow.com/a/63931554/2223106
 unsetopt nomatch
+. "$HOME/.cargo/env"
